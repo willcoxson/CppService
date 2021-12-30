@@ -1,0 +1,27 @@
+HKCR
+{
+	CppService.TestObject.1 = s 'TestObject class'
+	{
+		CLSID = s '{7594592c-ddc5-47f3-a2df-9cc397988fd0}'
+	}
+	CppService.TestObject = s 'TestObject class'
+	{		
+		CurVer = s 'CppService.TestObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7594592c-ddc5-47f3-a2df-9cc397988fd0} = s 'TestObject class'
+		{
+			AppID = s '{3a266de3-e432-4269-af44-5f76fdd0231f}'
+			ProgID = s 'CppService.TestObject.1'
+			VersionIndependentProgID = s 'CppService.TestObject'
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{3a266de3-e432-4269-af44-5f76fdd0231f}'
+			Version = s '1.0'
+		}
+	}
+}

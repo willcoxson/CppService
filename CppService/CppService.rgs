@@ -1,0 +1,18 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		ForceRemove {3a266de3-e432-4269-af44-5f76fdd0231f} = s 'CppService'
+		{
+			val LocalService = s 'CppService'
+			val ServiceParameters = s ''
+			val ROTFlags = d '1'
+			val RunAs = s 'nt authority\system'
+			val AuthenticationLevel = d '1'
+		}
+		ForceRemove CppService.exe
+		{
+			val AppID = s '{3a266de3-e432-4269-af44-5f76fdd0231f}'
+		}
+	}
+}

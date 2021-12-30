@@ -1,0 +1,36 @@
+// CppService.idl : IDL source for CppService
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CppService.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(ed0b3c1d-bcd9-4328-a3bb-c7c3d2dbded9),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITestObject : IDispatch
+{
+};
+[
+	uuid(3a266de3-e432-4269-af44-5f76fdd0231f),
+	version(1.0),
+]
+library CppServiceLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(7594592c-ddc5-47f3-a2df-9cc397988fd0)
+	]
+	coclass TestObject
+	{
+		[default] interface ITestObject;
+	};
+};
+
+import "shobjidl.idl";
