@@ -32,6 +32,10 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+Debug-x64/
+Release-x64/
+Debug-win32/
+Release-win32/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
